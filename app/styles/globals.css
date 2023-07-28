@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  background: #fff;
+  font-family: 'Ubuntu', sans-serif;
+  /* color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb)); */
+}
+
+
+/* ############################# Responsive For Mobile View ############################# */
+
+/* @media (min-width: 320px) and (max-width: 480px) {
+  .DivClass{
+    flex-direction: column;
+  }
+  #HomeHeroImage{
+    margin-top: 0px;
+    width: 300px;
+    height: 300px;
+  }
+  #HomeHeroSection{
+    height: 380px;
+  }
+  #HomeHeroSectionTextH{
+    margin-top: -160px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-size: x-large;
+    line-height: normal;
+  }
+  #HomeHeroSectionTextT{
+    font-size: larger;
+    line-height: normal;
+  }
+  #HomeHeroSectionTextP{
+    font-size: large;
+    line-height: normal;
+  }
+  #HomeSecondSection{
+    margin-top: -100px;
+    margin-left: -50px;
+    flex-direction: column;
+  }
+  #HomeSecondSectionDiv{
+    width: 400px;
+    height: 75vh;
+    align-items: center;
+  }
+  #HomeSecondSectionText{
+    font-size: x-large;
+    text-align: center;
+  }
+  #HomeSecondSectionLine{
+    align-items: center;
+    margin-top: 0px;
+    width: 110px;
+  }
+  #RightMainContainer{
+    align-items: center;
+    height: 60vh;
+  }
+  .ContainerClass{
+    width: 320px;
+  }
+  #Cont{
+    
+  }
+  #LeftCont{
+    width: 180px;
+    height: 41.5vh;
+  }
+  #RightCont{
+    width: 180px;
+    height: 41.5vh;
+  }
+  .ContClass{
+    width: 180px;
+    height: 180px;
+    flex-direction: row;
+  }
+  .LargeText{
+    font-size: x-large;
+    line-height: normal;
+  }
+  .SmallText{
+    font-size: large;
+    line-height: normal;
+  }
+} */

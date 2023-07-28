@@ -1,0 +1,22 @@
+stages:
+  - deploy_local
+variables:
+  BUILD_DIR: /var/www/laravel/xdatalogix
+
+deploy_to_local_server:
+  stage: deploy_local
+  before_script:
+    - mkdir -p /var/www/laravel/xdatalogix # Create the directory if it doesn't exist
+    - chmod -R 777 /var/www/laravel/xdatalogix/ # Set permissions to 777
+  script:
+    - rsync -avz --delete ./ /var/www/laravel/xdatalogix || echo "Failed to transfer files." # Copy the contents of the current directory to /home/dev/gitlab, and print an error message if it doesn't work
+    - while [ `ps aux | grep rsync | wc -l` -gt 1 ]; do sleep 1; done # Wait until the rsync process has completed
+    #- cd /var/www/laravel/cedric-millar
+    #- chmod -R 777 /var/www/laravel/cedric-millar/ # Change directory to /home/dev/gitlab
+    #- composer install
+    #- chmod -R 777 /var/www/laravel/cedric-millar/bootstrap/cache
+   # - mkdir storage/framework/{views,cache}
+    #- chmod -R 777 /var/www/laravel/cedric-millar/storage 
+    #- composer require laravel/ui
+    #- php artisan ui vue --auth
+    #- php artisan optimize:clear
